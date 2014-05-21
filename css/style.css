@@ -1,1 +1,4 @@
 #task-stuff { display: none; }
+#input-wrapper { float: left; width: 25%; }
+#output-wrapper { float: right; width: 50%; }
+.strike { text-decoration: line-through; }

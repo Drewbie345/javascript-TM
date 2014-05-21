@@ -7,23 +7,32 @@
 <body>
   <h1>Project Task Manager</h1>
   
-  <div id="project-stuff">  
-    <label for="project">Project Name:</label><input id="project" type="text" name="project">
+  <div id="input-wrapper">
+    <div id="project-stuff">  
+      <label for="project">Project Name:</label><input id="project" type="text" name="project">
+      <br />
+      <a href="#" id="project-btn">Submit</a>
+    </div>
+
     <br />
-    <a href="#" id="submit-btn">Submit</a>
+
+    <div id="task-stuff">
+      <label for="task-description">Task:</label><input id="task" type="text" name="task-description">
+      <a href="#" id="task-btn">Submit</a>
+    </div>
+  </div>
+  
+  <div id="output-wrapper">
+    
   </div>
 
-  <br />
 
-  <div id="task-stuff">
-    <label for="task-description">Task:</label><input id="task" type="text" name="task-description">
-  </div>
-
-  <script type="text/javascript" src="src/jquery.js"></script>
-  <script type="text/javascript" src="src/db.js"></script>
-  <script type="text/javascript" src="src/task.js"></script>
-  <script type="text/javascript" src="src/project.js"></script>
-  <script type="text/javascript" src="src/employee.js"></script>
-  <script type="text/javascript" src="src/client.js"></script>
+  <script type="text/javascript" src="vendor/jquery.js"></script>
+  <script type="text/javascript" src="lib/tm.js"></script>
+  <script type="text/javascript" src="lib/db.js"></script>
+  <script type="text/javascript" src="lib/task.js"></script>
+  <script type="text/javascript" src="lib/project.js"></script>
+  <script type="text/javascript" src="lib/employee.js"></script>
+  <script type="text/javascript" src="browser/client.js"></script>
 </body>
 </html>

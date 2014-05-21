@@ -16,7 +16,7 @@ describe( "DB library", function() {
   var jane;
   var john;
 
-  myDB = DB.getDB();
+  myDB = TM.getDB();
   
   myDB.createProject("My Project");
   myDB.createProject("My Second Project");
@@ -52,8 +52,8 @@ describe( "DB library", function() {
 
   describe( "create a singleton", function() {
     it("creates only one instance of a DB, even when called twice", function() {
-      var myDB1 = DB.getDB();
-      var myDB2 = DB.getDB();
+      var myDB1 = TM.getDB();
+      var myDB2 = TM.getDB();
 
       expect(myDB1 === myDB2).toEqual(true);
     })
@@ -171,6 +171,14 @@ describe( "DB library", function() {
       
       expect(myTasks).toContain(myFifthTask);
       expect(myFifthTask.employees).toContain(john);
+    })
+  });
+
+  describe( "complete task", function() {
+    it("marks a task as complete", function() {
+      myDB.completedTask(myThirdProject.id, mySixthTask.taskId);
+
+      expect(mySixthTask.completed).toEqual(true);
     })
   });
 })
