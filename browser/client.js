@@ -14,7 +14,7 @@ $(document).ready(function(){
       
       var project = myDB.createProject(projectTitle);
     
-      localStorage.setItem(data, project.id);
+      // localStorage.setItem(data, project.id);
       x++;
 
       displayProject(projectTitle); 
